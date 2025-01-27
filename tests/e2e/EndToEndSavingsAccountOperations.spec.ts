@@ -53,11 +53,14 @@ test.describe.serial('Complete E2E Flow: Registration to API Validation', () => 
     console.log('Generated username:', username);
     console.log('Generated password:', user.password);
 
+    // Step 2.1: Log out after registration
+    await loginPage.logout();
+    console.log('Logged out after registration.');
 
-    // // Step 3: Log in with the created user
-    // await loginPage.page.pause();
-    // await loginPage.navigateToLoginPage();
-    // await loginPage.login(username, user.password);
+    // Step 3: Log in with the created user
+    //await loginPage.page.pause();
+    await loginPage.navigateToLoginPage();
+    await loginPage.login(username, user.password);
 
     // Step 4: Verify the global navigation menu
     //await homePage.navigateToHomePage();

@@ -28,4 +28,10 @@ export class LoginPage {
       await this.page.click('//input[@value="Log In"]'); 
 
   }
+  async logout() {
+    //await this.page.pause();
+    await this.page.getByRole('link', { name: 'Log Out' }).click();
+    await this.page.waitForSelector('input[name="username"]'); // Wait for the login page to load
+  }
+
 }
