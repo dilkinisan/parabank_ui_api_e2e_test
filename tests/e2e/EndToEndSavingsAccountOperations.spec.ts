@@ -1,4 +1,4 @@
-// tests/EndToEndSavingsAccountOperations.tc
+// tests/e2e/EndToEndSavingsAccountOperations.ts
 import { test, expect } from '../../utils/baseTest';
 import { LoginPage } from '../../pages/loginPage';
 import { RegistrationPage } from '../../pages/registrationPage';

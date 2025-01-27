@@ -19,6 +19,7 @@ export default defineConfig({
   use: {
     baseURL: process.env.PARA_BANK_URL, // Base URL for your tests (ensure this matches your .env file)
     trace: 'on-first-retry', // Collect trace when retrying a failed test
+    headless: true, // Ensure all tests run in headless mode
   },
 
   // Configure projects for major browsers
