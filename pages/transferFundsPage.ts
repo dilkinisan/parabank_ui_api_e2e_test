@@ -23,11 +23,11 @@ export class TransferFundsPage {
     await this.page.click('text=Transfer Funds');
     await expect(this.page).toHaveURL(/transfer\.htm/i); // Verify the URL
 
-   /* // Wait for the "From Account" dropdown to be loaded
+   /* // Wait for the From Account dropdown to be loaded
     await this.waitForFromAccountDropdownLoaded();
   }
 
-  // Wait for the "From Account" dropdown to be loaded
+  // Wait for the From Account dropdown to be loaded
   async waitForFromAccountDropdownLoaded() {
     // Wait for at least one option to be visible in the dropdown
     await this.fromAccountDropdown.locator('option').first().waitFor({ state: 'visible' });
@@ -45,7 +45,7 @@ export class TransferFundsPage {
       return await option.innerText();
     }));
 
-    // Log the account numbers for debugging
+    // Log the account numbers 
     console.log('Dropdown Options:', accountNumbers);
 
     return accountNumbers.filter(Boolean); // Remove empty values
@@ -70,6 +70,6 @@ export class TransferFundsPage {
 
   // Verify the transfer was successful
   async verifyTransferSuccess() {
-    await expect(this.transferSuccessMessage).toBeVisible(); // Verify success message
+    await expect(this.transferSuccessMessage).toBeVisible(); // Verify success msg
   }
 }

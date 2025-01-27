@@ -12,16 +12,16 @@ export function generateRandomUsername(): string {
   // Utility function to return static user data with a unique username
 export function getUserData() {
   return {
-    firstName: 'John', // Static first name
-    lastName: 'Doe', // Static last name
-    address: '123 Main St', // Static address
-    city: 'Anytown', // Static city
-    state: 'CA', // Static state
-    zipCode: '12345', // Static zip code
-    phone: '123-456-7890', // Static phone number
-    ssn: '123-45-6789', // Static SSN
-    username: generateRandomUsername(), // Unique username
-    password: 'password123', // Static password
+    firstName: 'John', 
+    lastName: 'Doe', 
+    address: '123 Main St', 
+    city: 'Anytown', 
+    state: 'CA', 
+    zipCode: '12345', 
+    phone: '123-456-7890', 
+    ssn: '123-45-6789', 
+    username: generateRandomUsername(), 
+    password: 'password123', 
     };
   }
 

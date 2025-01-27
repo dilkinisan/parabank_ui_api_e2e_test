@@ -23,9 +23,9 @@ export class LoginPage {
   }
 
   async login(username: string, password: string) {
-      await this.page.fill('//input[@name="username"]', username); // Fill username field
-      await this.page.fill('//input[@name="password"]', password); // Fill password field
-      await this.page.click('//input[@value="Log In"]'); // Click the login button
+      await this.page.fill('//input[@name="username"]', username); 
+      await this.page.fill('//input[@name="password"]', password); 
+      await this.page.click('//input[@value="Log In"]'); 
 
   }
 }

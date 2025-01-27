@@ -29,10 +29,10 @@ export class HomePage {
       await this.page.click(`text=${link.text}`);
       console.log(`Clicked link: ${link.text}`);
 
-      // Verify the URL (optional, based on your needs)
+      // Verify the URL 
       // await expect(this.page).toHaveURL(link.expectedUrl);
 
-      // Navigate back to the home page only for "Products" and "Locations"
+      // Navigate back to the home page only for "Products" and "Locations" since thos have jsp links
       if (link.text === 'Products' || link.text === 'Locations') {
         await this.page.goBack(); // Navigate back to the previous page
         console.log(`Navigated back from: ${link.text}`);

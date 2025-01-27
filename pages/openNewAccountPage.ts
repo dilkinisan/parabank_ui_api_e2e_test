@@ -20,7 +20,7 @@ export class OpenNewAccountPage {
     await this.page.goto('/parabank/openaccount.htm');
   }
 
-  // Select account type (e.g., 'SAVINGS' or 'CHECKING')
+  // Select account type ('SAVINGS' or 'CHECKING')
   async selectAccountType(accountType: string) {
     await this.accountTypeDropdown.click;
     await this.accountTypeDropdown.selectOption('SAVINGS');
@@ -43,6 +43,6 @@ export class OpenNewAccountPage {
     // Retrieve the account number text
     const accountNumber = await this.newAccountId.innerText();
     console.log(`Retrieved Account Number: "${accountNumber}"`); // Log the retrieved account number
-    return accountNumber.trim(); // Trim any extra spaces
+    return accountNumber.trim(); // Trim any spaces
   }
 }

@@ -1,5 +1,5 @@
 // utils/baseTest.ts
-import { test as base, Page, expect } from '@playwright/test'; // Import expect
+import { test as base, Page, expect } from '@playwright/test'; 
 import { LoginPage } from '../pages/loginPage';
 import { readUserCredentials } from './fileUtils';
 
@@ -8,20 +8,20 @@ export const test = base.extend<{ loggedInPage: Page }>({
   loggedInPage: async ({ page }, use) => {
     const loginPage = new LoginPage(page);
 
-    // Step 1: Retrieve user credentials from the file
+    // Retrieve user credentials from the file
     const { username, password } = readUserCredentials();
     console.log('Retrieved user credentials:', { username, password });
 
-    // Step 2: Navigate to the login page and log in
+    // Navigate to the login page and log in
     await loginPage.navigateToLoginPage();
     await loginPage.login(username, password);
 
-    // Step 3: Verify login success
+    // Verify login success
     await expect(page.getByRole('heading', { name: 'Account Services' })).toBeVisible();
 
-    // Step 4: Pass the logged-in page to the test
+    // Pass the logged-in page to the test
     await use(page);
   },
 });
 
-export { expect }; // Re-export expect for convenience
+export { expect }; // Re-export expect 

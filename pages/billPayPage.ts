@@ -50,10 +50,10 @@ export class BillPayPage {
     amount: string,
     fromAccountNumber: string // New parameter for "From Account" number
   ) {
-    // Step 1: Select the "From Account" dropdown
+    // Select the "From Account" dropdown
     await this.fromAccountDropdown.selectOption(fromAccountNumber);
 
-    // Step 2: Fill out the form
+    // Fill out the form
     await this.payeeNameInput.fill(payeeName);
     await this.addressInput.fill(address);
     await this.cityInput.fill(city);
@@ -72,6 +72,6 @@ export class BillPayPage {
 
   // Verify the payment was successful
   async verifyPaymentSuccess() {
-    await expect(this.paymentSuccessMessage).toBeVisible(); // Verify success message
+    await expect(this.paymentSuccessMessage).toBeVisible(); // Verify sucess message
   }
 }

@@ -52,7 +52,7 @@ export class RegistrationPage {
 
   // Submit the registration form
   async submitRegistrationForm() {
-    await this.page.click(this.submitButton); // Clicks the "Submit" button
+    await this.page.click(this.submitButton); 
   }
 
   // Verify registration success
