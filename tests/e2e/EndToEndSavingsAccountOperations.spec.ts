@@ -135,7 +135,12 @@ test.describe.serial('Complete E2E Flow: Registration to API Validation', () => 
       'Bill Payment' // Expected transaction description
     );
 
-    console.log('Validated Transaction:', JSON.stringify(transaction, null, 2));
+    // Additional assertions
+    expect(transaction.amount).toBe(parseFloat(amount));
+    expect(transaction.type).toBe('Debit');
+    expect(transaction.description).toContain('Bill Payment');
+
+    console.log('Validated Transaction:/API JSON Response:', JSON.stringify(transaction, null, 2));
 
     // Additional assertions
     expect(transaction.amount).toBe(parseFloat(amount));

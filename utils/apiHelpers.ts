@@ -12,7 +12,9 @@ export async function validateTransaction(
     const response = await request.get(endpoint, {
       headers: { Accept: 'application/json' },
     });
-  
+    console.log('API Endpoint:',endpoint);
+    console.log('API Status:', response); 
+
     const responseBody = await response.text();
     const transactions = JSON.parse(responseBody);
   
