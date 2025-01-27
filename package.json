@@ -1,0 +1,27 @@
+{
+  "name": "playwright-ui-api-tests",
+  "version": "1.0.0",
+  "description": "FG -Coding Challenge",
+  "main": "index.js",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dilkinisan/playwright-ui-api-tests.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dilkinisan/playwright-ui-api-tests/issues"
+  },
+  "homepage": "https://github.com/dilkinisan/playwright-ui-api-tests#readme",
+  "devDependencies": {
+    "@playwright/test": "^1.50.0",
+    "@types/node": "^22.10.10",
+    "typescript": "^5.7.3"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.7",
+    "uuid": "^11.0.5"
+  }
+}
